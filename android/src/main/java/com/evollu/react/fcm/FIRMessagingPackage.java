@@ -12,15 +12,17 @@ import java.util.List;
 
 public class FIRMessagingPackage implements ReactPackage {
 
-    public FIRMessagingPackage(){
-    }
-
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
 
         modules.add(new FIRMessagingModule(reactContext));
         return modules;
+    }
+
+    @Override
+    public List<Class<? extends JavaScriptModule>> createJSModules() {
+        return Collections.emptyList();
     }
 
     @Override

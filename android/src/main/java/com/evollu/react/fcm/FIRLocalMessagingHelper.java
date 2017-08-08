@@ -75,7 +75,7 @@ public class FIRLocalMessagingHelper {
             NotificationCompat.Builder notification = new NotificationCompat.Builder(mContext)
                     .setContentTitle(title)
                     .setContentText(bundle.getString("body"))
-                    .setTicker(bundle.getString("ticker"))
+                    .setTicker("Insales")
                     .setVisibility(NotificationCompat.VISIBILITY_PRIVATE)
                     .setAutoCancel(bundle.getBoolean("auto_cancel", true))
                     .setNumber(bundle.getInt("number"))
@@ -103,7 +103,7 @@ public class FIRLocalMessagingHelper {
 
             //icon
             String smallIcon = bundle.getString("icon", "ic_launcher");
-            int smallIconResId = res.getIdentifier(smallIcon, "mipmap", packageName);
+            int smallIconResId = res.getIdentifier("insales_logo", "mipmap", packageName);
             notification.setSmallIcon(smallIconResId);
 
             //large icon
